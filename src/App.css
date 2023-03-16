@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+/* navbar */
+
+.navbar #logo {
+  height: 55px;
+  border-bottom: 2px solid red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar #logo:hover {
+  border-color: blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar form TextField {
+  max-height: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar a:hover {
+  color: blue;
+}
+
+/* movie search */
+.movie {
+  margin: 1% 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: linear-gradient(to right, rgba(202, 207, 245, 0.934), rgba(76, 70, 200, 0.734));
+  padding: 3%;
+  border-bottom: 5px solid rgba(114, 15, 160, 0.314);
 }
 
-.App-link {
-  color: #61dafb;
+.movie #combo-box-demo {
+  height: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.container.card IconButton {
+  color: red;
 }
