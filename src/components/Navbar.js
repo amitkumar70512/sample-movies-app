@@ -1,10 +1,8 @@
-import logo from './DishLogo.png';
-import './App.css';
-import TextField from '@mui/material/TextField';
-import { Button } from '@mui/material';
+import logo from '../DishLogo.png';
+import '../App.css';
 
-
-import Modal from './Modal';
+import { Link } from 'react-router-dom'
+import Modal from '../Modal';
 
 
 function Navbar(props) {
@@ -20,10 +18,11 @@ function Navbar(props) {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                                <Link className='nav-link' to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="https://amitkumar70512.github.io/Task-1/">Task 1</a>
+
+                            <li>
+                                <Link className='nav-link' to="/about" >About Us </Link>
                             </li>
                             <li>
                                 <button type="button" class="btn btn-light position-relative" data-bs-toggle="modal" data-bs-target="#wishlistModal">
@@ -34,16 +33,11 @@ function Navbar(props) {
                                 </button>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                            <Button variant="contained" type="submit">Contained</Button>
-                            {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
-                        </form>
 
                     </div>
                 </div>
             </nav>
-            <Modal />
+            <Modal movies={props.wishlist} />
         </>
     );
 }

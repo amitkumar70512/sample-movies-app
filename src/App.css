@@ -1,3 +1,19 @@
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff0202de;
+  ;
+}
+
 /* navbar */
 
 .navbar #logo {
@@ -32,8 +48,122 @@
 
 }
 
-
+/* card */
 
 .container.card IconButton {
   color: red;
+}
+
+.card {
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #ecf0f1;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 99;
+  transition-delay: all 900ms;
+}
+
+.card .card-body .card-info {
+  color: rgb(6, 73, 69);
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.card .card-body .card-info span {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.card .card-body a {
+  text-decoration: none;
+}
+
+.card .card-body a:hover {
+  border-bottom: 2px solid red;
+}
+
+/* carousel */
+
+.carousel {
+  display: flexbox;
+  margin: 50px;
+  width: 50%;
+  height: 50%
+}
+
+.carousel slide {
+  justify-content: center;
+}
+
+
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #f1403d transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.container h2 {
+  width: fit-content;
+  margin: 10px 0;
+  padding: 10px;
+
+  border-bottom: 2px solid white;
+}
+
+.container h2:hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}
+
+
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: rgba(40, 96, 118);
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.7%;
+  border-top: 5px solid#264554;
+}
+
+.footer .row {
+  color: rgb(255, 255, 255);
+  padding: 1%;
+}
+
+
+.contact {
+  margin: 5%;
 }

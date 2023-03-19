@@ -1,8 +1,8 @@
 import './App.css';
-import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import img from './movie.jpeg';
+// import IconButton from '@mui/material/IconButton';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
+// import ShareIcon from '@mui/icons-material/Share';
+// import img from './movie.jpeg';
 
 
 function Modal(props) {
@@ -15,12 +15,15 @@ function Modal(props) {
                             <h1 className="modal-title fs-5" id="exampleModalLabel">Your Favourites movies</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div className="modal-body">
-                            ...
-                        </div>
+                        {props.movies && props.movies.map((movie) => (
+                            <div className="modal-body" key={movie}>
+                                {movie}
+                            </div>
+                        ))
+                        }
+
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
