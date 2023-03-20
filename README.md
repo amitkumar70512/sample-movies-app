@@ -5,6 +5,15 @@
 
 <hr>
 
+
+![Untitled video - Made with Clipchamp](https://user-images.githubusercontent.com/71318008/226402731-3687106a-ac5d-444c-9328-7e61fbdd8022.gif)
+
+### Searching
+![searching in react](https://user-images.githubusercontent.com/71318008/226403380-b0cd9da8-1d2c-40fa-8f12-9b720cd2df44.gif)
+
+
+<hr>
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -27,5 +36,17 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+<hr>
+## useContext hook
+
+![Screenshot (8)](https://user-images.githubusercontent.com/71318008/226400623-9d66e190-b09c-4208-9464-3a20a6370add.png)
+
+![Screenshot (9)](https://user-images.githubusercontent.com/71318008/226400632-f389fcff-24f8-40aa-95ba-a22a26d4f945.png)
+
+![Screenshot (10)](https://user-images.githubusercontent.com/71318008/226400638-c54400aa-ee00-46a1-b29a-e29b9038ec0a.png)
+
+
 
 
