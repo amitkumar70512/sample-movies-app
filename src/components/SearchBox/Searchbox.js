@@ -40,7 +40,6 @@ export default function SearchBox() {
                     <div key={index}>
                         <ListItem
                             title={result.title}
-
                             imageUrl={`${img_url}${result.poster_path}`}
                             caption={result.release_date}
                             id={result.id}

@@ -1,11 +1,13 @@
 import logo from '../DishLogo.png';
 import '../App.css';
+// import {useContext,createContext} from 'react';
 
 import { Link } from 'react-router-dom'
-import Modal from '../Modal';
+import Modal from './Modal';
 
 
 function Navbar(props) {
+    // const wishlist = useContext(UserContext);
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">

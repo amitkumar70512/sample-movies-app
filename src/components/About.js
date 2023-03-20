@@ -1,8 +1,9 @@
 import Navbar from "./Navbar";
-
-
+import { useContext,createContext } from "react";
 
 function About() {
+    const UserContext = createContext(null)
+    const {wishlist,setWishlist} = useContext(UserContext);
     return (
         <>
 
