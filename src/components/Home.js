@@ -10,18 +10,22 @@ const REACT_APP_API_KEY = "3e99401540a1842231b61f8caaca2b56";
 
 
 
-function Home(props) {
-    
+function Home() {
+
     const [movies, setMovies] = useState(null);
     const [page, setPage] = useState(1); // by default page should be page 1
-    const [wishlist, setWishlist] = useState([]);
-    const [favCount, setfavCount] = useState(0);//  number of movies in wishlist
-  
-    const handleLike = ( title) => {
-      setWishlist(wishlist => [...wishlist, title]);
-      setfavCount(favCount + 1);
-      console.log(wishlist);
-    }
+
+
+    // const [wishlist, setWishlist] = useState([]);
+    // const [favCount, setfavCount] = useState(0);//  number of movies in wishlist
+
+
+    // replaced by usercontext 
+    // const handleLike = (title) => {
+    //     setWishlist(wishlist => [...wishlist, title]);
+    //     setfavCount(favCount + 1);
+    //     console.log(wishlist);
+    // }
 
     const handleShare = () => {
         window.alert("will be handled to share movie", process.env.API_KEY);
@@ -36,15 +40,15 @@ function Home(props) {
     const handleNext = () => {
         setPage(page + 1);
     }
-    
-    
+
+
     const handleLoad = () => {
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${REACT_APP_API_KEY}&page=${page}`)
-        .then(
+            .then(
                 (data) => (data.json())
-                )
-                .then(
-                    data => {
+            )
+            .then(
+                data => {
                     setMovies(data.results);
                 }
             )
@@ -56,16 +60,14 @@ function Home(props) {
     useEffect(() => {
         handleLoad();
     })
-    
 
-    console.log("props passed from app.js "+ props.wishlist)
-    
-    
-    
-    return ( 
+
+
+
+    return (
         <>
-            <Navbar count={favCount} wishlist={wishlist} />
-        
+            <Navbar />
+
             <SearchBox />
 
             <div className="container my-2">
@@ -80,7 +82,6 @@ function Home(props) {
                                 image={movie.backdrop_path}
                                 release_date={movie.release_date}
                                 avg_vote={movie.vote_average}
-                                handleLike={handleLike}
                                 handleShare={handleShare} />
                         </div>
                     ))

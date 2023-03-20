@@ -1,13 +1,13 @@
-import logo from '../DishLogo.png';
-import '../App.css';
-// import {useContext,createContext} from 'react';
-
 import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { UserContext } from '../App';
 import Modal from './Modal';
 
+import logo from '../DishLogo.png';
+import '../App.css';
 
-function Navbar(props) {
-    // const wishlist = useContext(UserContext);
+function Navbar() {
+    const { wishlist, handleLike } = useContext(UserContext);
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -26,11 +26,12 @@ function Navbar(props) {
                             <li>
                                 <Link className='nav-link' to="/about" >About Us </Link>
                             </li>
+
                             <li>
                                 <button type="button" class="btn btn-light position-relative" data-bs-toggle="modal" data-bs-target="#wishlistModal">
                                     Wishlist <i class="fa-solid fa-bookmark"></i>
                                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                        {props.count}
+                                        {wishlist.length}
                                     </span>
                                 </button>
                             </li>
@@ -39,7 +40,7 @@ function Navbar(props) {
                     </div>
                 </div>
             </nav>
-            <Modal movies={props.wishlist} />
+            <Modal movies={wishlist} />
         </>
     );
 }

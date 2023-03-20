@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { UserContext } from '../App';
+
 import '../App.css';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -5,7 +8,7 @@ import ShareIcon from '@mui/icons-material/Share';
 
 function MovieItem(props) {
     let imageUrl = `https://image.tmdb.org/t/p/w500/${props.image}`;
-
+    const { wishlist, handleLike } = useContext(UserContext);// handleLike context is used here...
 
     return (
         <>
@@ -22,7 +25,8 @@ function MovieItem(props) {
 
                     <p className="card-text"> <a href={`/detail/${props.id} `} onClick={() => props.readMore(props.id)}>Read more</a></p>
 
-                    <IconButton aria-label="add to favorites" style={{ color: "red" }} onClick={() => props.handleLike(props.title)}>
+                    <IconButton aria-label="add to favorites" style={{ color: "red" }} onClick={() => handleLike(props.title)}>
+                        {/* <IconButton aria-label="add to favorites" style={{ color: "red" }} onClick={() => props.handleLike(props.title)}> */}
                         <FavoriteIcon />
                     </IconButton>
                     <IconButton aria-label="share" style={{ color: "#233f57" }} onClick={() => props.handleShare()}>

@@ -31,10 +31,6 @@ const Details = (props) => {
 
 
 
-
-
-
-
     return (
         <>
             <Navbar />
