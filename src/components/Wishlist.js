@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { useContext } from 'react';
-import { UserContext } from '../App';
+import ListItem from './ListItem';
 import Navbar from './Navbar';
+import Empty from './Empty';
 
 const ListContainer = styled.div`
 display: flex;
@@ -42,39 +43,34 @@ margin-block-end: 8px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `
 
-const WishlistItem = ({ id, title, caption, imageUrl }) => {
-    // let imageUrl = `https://image.tmdb.org/t/p/w500/${props.image}`;
-    const { wishlist } = useContext(UserContext);// handleLike context is used here...
-    console.log(wishlist)
+const Wishlist = (props) => {
+    const result = useSelector(state=>state.wishlist) //array of Json objects with dup  [{},{}]
+        const uniqueResult = new Set(result.map(JSON.stringify));  //unique result but in set of strings ( by json.stringify)  
+        const uniqueResultArray = Array.from(uniqueResult); 
+        const Result = uniqueResultArray.map(JSON.parse)
+        const count = Result.length;
+    console.log(Result)
+    Result.map((movie)=>{
+        console.log(movie.title)
+    })
     return (
         <>
             <Navbar />
-            <h4>Your Favourite Movies</h4>
-
-            {
-                wishlist?.wishlist?.map((result, index) => (
-                    <div key={index}>
-                        <h4>
-                            {result}
-                        </h4>
-
-                    </div>
+                
+            {(count === 0) && <Empty />}
+                {
+                    Result?.map((movie, index) => (
+                        <div key={index}>
+                            <ListItem
+                                title={movie.title}
+                                imageUrl={movie.imageUrl}
+                                caption={movie.release_date}
+                                id={movie.id}
+                            />
+                        </div>
                 ))}
-
-            <ListContainer>
-                <ListLeft>
-                    <Thumbnail src={imageUrl} />
-                </ListLeft>
-                <Center>
-                    <CenterHead>{title}</CenterHead>
-                    <CenterPar>{caption}</CenterPar>
-                </Center>
-                <ListRight>
-                    <Link to={`/detail/${id} `} style={{ color: '#323232', textDecoration: 'none' }}> <RightP>&#8250;</RightP></Link>
-                </ListRight>
-            </ListContainer>
         </>
     );
 };
 
-export default WishlistItem;
+export default Wishlist;

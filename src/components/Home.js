@@ -16,16 +16,8 @@ function Home() {
     const [page, setPage] = useState(1); // by default page should be page 1
 
 
-    // const [wishlist, setWishlist] = useState([]);
-    // const [favCount, setfavCount] = useState(0);//  number of movies in wishlist
 
-
-    // replaced by usercontext 
-    // const handleLike = (title) => {
-    //     setWishlist(wishlist => [...wishlist, title]);
-    //     setfavCount(favCount + 1);
-    //     console.log(wishlist);
-    // }
+    
 
     const handleShare = () => {
         window.alert("will be handled to share movie", process.env.API_KEY);
@@ -62,8 +54,6 @@ function Home() {
     })
 
 
-
-
     return (
         <>
             <Navbar />
@@ -94,7 +84,6 @@ function Home() {
                         (page > 1) &&
                         <button type="button" className="btn btn-light" onClick={handlePrev}>&#8592; Previous</button>
                     }
-
                     {(page === 1) &&
                         <button type="button" className="btn btn-light" onClick={handlePrev} disabled>&#8592; Previous</button>
                     }

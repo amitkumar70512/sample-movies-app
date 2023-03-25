@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -166,4 +170,28 @@
 
 .contact {
   margin: 5%;
+}
+
+
+
+.container-empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin:5%;
+  font-size: 25px;
+}
+
+.container-empty span{
+  color: red;
+}
+.container-empty #link{
+  text-transform: lowercase;
+  color: blue;
+  opacity: 0.7;
+  text-decoration: none;
+}
+.container-empty #link:hover{
+  opacity: 1;
 }
