@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ReactAPP_MovieDB_api_Redux/static/css/main.fdfd3623.css",
+    "main.js": "/ReactAPP_MovieDB_api_Redux/static/js/main.8cccdb22.js",
+    "static/js/787.28cb0dcd.chunk.js": "/ReactAPP_MovieDB_api_Redux/static/js/787.28cb0dcd.chunk.js",
+    "static/media/DishLogo.png": "/ReactAPP_MovieDB_api_Redux/static/media/DishLogo.138a24a34ec0ad3e11d2.png",
+    "index.html": "/ReactAPP_MovieDB_api_Redux/index.html",
+    "main.fdfd3623.css.map": "/ReactAPP_MovieDB_api_Redux/static/css/main.fdfd3623.css.map",
+    "main.8cccdb22.js.map": "/ReactAPP_MovieDB_api_Redux/static/js/main.8cccdb22.js.map",
+    "787.28cb0dcd.chunk.js.map": "/ReactAPP_MovieDB_api_Redux/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdfd3623.css",
+    "static/js/main.8cccdb22.js"
+  ]
+}
