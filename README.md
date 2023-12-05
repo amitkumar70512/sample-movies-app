@@ -1,5 +1,5 @@
 
-## Go Live [App]('https://amitkumar70512.github.io/sample-movies-app')
+## [Go Live ](https://amitkumar70512.github.io/sample-movies-app)
 
 ### Author: [Amit Kumar](https://www.linkedin.com/in/amit-kumar-247b26223/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2BCl34iqASrKeLvLFbiY77g%3D%3D)
 
